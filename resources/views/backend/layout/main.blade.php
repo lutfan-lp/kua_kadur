@@ -67,20 +67,61 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Komponen</span>
+                    <span>Berita</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Komponen:</h6>
                         <a class="collapse-item" href="{{route('berita.index')}}">Berita</a>
                         <a class="collapse-item" href="{{route('kategori.index')}}">Kategori</a>
-                        <a class="collapse-item" href="{{route('profile.index')}}">Profile</a>
-                        <a class="collapse-item" href="{{route('page.index')}}">Data Page</a>
-                        <a class="collapse-item" href="{{route('menu.index')}}">Data Menu</a>
                     </div>
                 </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseThree">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Maklumat</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Komponen:</h6>
+                        <a class="collapse-item" href="{{route('maklumat.index')}}">Maklumat</a>
+                        <a class="collapse-item" href="{{route('kategoriMaklumat.index')}}">Kategori Maklumat</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Layanan</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Komponen:</h6>
+                        <a class="collapse-item" href="{{route('layanan.index')}}">Layanan</a>
+                        <a class="collapse-item" href="{{route('bagianLayanan.index')}}">Bagian Layanan</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('page.index')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Page</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('menu.index')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Menu</span>
+                </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
@@ -374,7 +415,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2025</span>
+                        <span>Copyright &copy; Website Admin KUA Kadur 2025</span>
                     </div>
                 </div>
             </footer>

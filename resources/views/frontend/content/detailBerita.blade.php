@@ -1,4 +1,4 @@
-@extends('frontend.layout.main')
+@extends('frontend.layout.pagelayout')
 @section('content')
 <section class="py-5">
     <div class="container px-5 my-5">
@@ -20,10 +20,7 @@
                         <!-- Post title-->
                         <h1 class="fw-bolder mb-1">{{$berita->judul_berita}}</h1>
                         <!-- Post meta content-->
-                        <div class="text-muted fst-italic mb-2">{{$berita->created_at}}</div>
-                        <!-- Post categories-->
-                        <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
-                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a> -->
+                        <div class="text-muted fst-italic mb-2">{{$berita->created_at ? $berita->created_at->format('Y-M-d') : 'Tanggal tidak tersedia'}}</div>
                     </header>
                     <!-- Preview image figure-->
                     <figure class="mb-4">

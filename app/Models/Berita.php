@@ -12,8 +12,8 @@ class Berita extends Model
 
   protected $fillable = ["judul_berita", "isi_beita", "gambar_berita", "id_kategori", "total_views"];
 
-  public function kategori(){
-
+  public function kategori()
+  {
     return $this->belongsTo(Kategori::class, 'id_kategori');
   }
 }

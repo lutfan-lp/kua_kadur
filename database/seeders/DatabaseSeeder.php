@@ -87,5 +87,16 @@ class DatabaseSeeder extends Seeder
             'urutan_menu' => 2,
             'parent_menu' => 3
         ]);
+
+        DB::table('kategori_maklumat')->insert([
+            'nama_kategori_maklumat' => 'Pengumuman'
+        ]);
+
+        DB::table('maklumats')->insert([
+            'judul_maklumat' => 'Jadwal Bimwin Bulan April',
+            'isi_maklumat' => 'lorem Ipsum, lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate enim temporibus ipsa quidem dignissimos quis hic vero laborum quaerat dicta et distinctio modi deserunt animi provident, illo dolorum blanditiis totam.',
+            'gambar_maklumat' => 'lorem.jpeg',
+            'id_kategori_maklumat' => 1
+        ]);
     }
 }

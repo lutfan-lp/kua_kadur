@@ -29,12 +29,22 @@
             <div class="tab-pane fade show active" id="tentang" role="tabpanel">
                 <div class="row mb-5 align-items-center">
                     <div class="col-lg-6">
-                        <h2>Sejarah KUA Kecamatan Kadur</h2>
-                        <p>KUA Kecamatan Kadur didirikan tahun 1985 sebagai upaya pelayanan keagamaan yang lebih baik.</p>
-                        <p>Gedung direnovasi tahun 2010, kini melayani pernikahan, wakaf, bimbingan keluarga, dan lainnya.</p>
+                        <h2>KANTOR URUSAN AGAMA KECAMATAN KADUR</h2>
+                        <!-- <p>KUA Kecamatan Kadur didirikan tahun 1985 sebagai upaya pelayanan keagamaan yang lebih baik.</p>
+                        <p>Gedung direnovasi tahun 2010, kini melayani pernikahan, wakaf, bimbingan keluarga, dan lainnya.</p> -->
+                        <p>
+                            Kantor Urusan Agama Kecamatan Kadur memiliki sarana berupa gedung balainikah yang letaknya berada dijalan raya Sokolelah Kadur posisinya kurang lebih 500 meterkearah Timur Kantor Kecamatan Kadur (sebelah selatan SMPN I Kadur).
+                        </p>
+                        <p>
+                            Gedung balai nikah Kantor Urusan Agama (KUA) tersebut dibangun pada tahun 1997
+                            melalui sumber dana anggaran pendapatan dan belanja negara (APBN) dengan luas bangunan
+                            gedung 180,5 meter persegi yang berdiri di atas areal tanah seluas 368 meter persegi sedangkan
+                            kondisi bangunan tersebut hingga saat ini tergolong berkategori sedang, oleh karena itu masih
+                            memerlukan perbaikan-perbaikan.
+                        </p>
                     </div>
                 <div class="col-lg-6 text-center">
-                    <img src="/storage/gedung-kua.jpg" alt="Gedung KUA" class="img-fluid rounded">
+                    <img src="/storage/default-image.jpg" alt="Gedung KUA" class="img-fluid rounded">
                 </div>
                 </div>
                 <div>
@@ -113,10 +123,36 @@
 
             <!-- Struktur Organisasi -->
             <div class="tab-pane fade" id="struktur" role="tabpanel">
+                <h2>Struktur Organisasi KUA Kecamatan Kadur</h2>
                 <div class="text-center mb-5">
-                    <img src="/storage/struktur-organisasi.jpg" alt="Struktur Organisasi" class="img-fluid rounded">
+                    <img src="/storage/profile/struktur.png" alt="Struktur Organisasi" class="img-fluid rounded">
                 </div>
                 <div class="row g-4">
+                    <h2>Personalia Pegawai KUA Kecamatan Kadur</h2>
+                    <div class="col-md-4 text-center">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Kepala KUA</h5>
+                                <p class="text-muted">H. AHMAD SYAIHU, M.Si.<br>NIP. 197410282000031001</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Penghulu</h5>
+                                <p class="text-muted">Muhammad Hasan, S.HI<br>NIP. 198203102009011005</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5>Penyuluh Agama</h5>
+                                <p class="text-muted">Hj. Siti Aminah, S.Pd.I<br>NIP. 198107202010012008</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4 text-center">
                         <div class="card h-100">
                             <div class="card-body">

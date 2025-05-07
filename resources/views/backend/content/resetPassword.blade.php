@@ -14,46 +14,31 @@
         <form action="{{route('dashboard.prosesResetPassword')}}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="mb-3">
-            <label class="form-label">Judul Berita</label>
-            <input type="text" name="judul_berita" value="{{old('judul_berita')}}" class="form-control @error('judul_berita') is-invalid @enderror">
-            @error('judul_berita')
+            <label class="form-label">Password Lama</label>
+            <input type="password" name="old_password" value="{{old('old_password')}}" class="form-control @error('old_password') is-invalid @enderror">
+            @error('old_password')
             <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
             @enderror
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Kategori Berita</label>
-            <select name="id_kategori" class = "form-control @error('id_kategori') is-invalid @enderror" id="">
-              @foreach($kategori as $row)
-                <option value="{{$row->id_kategori}}">{{$row->nama_kategori}}</option>
-              @endforeach
-            </select>
-            @error('judul_berita')
+            <label class="form-label">Password Baru</label>
+            <input type="password" name="new_password" value="{{old('new_password')}}" class="form-control @error('new_password') is-invalid @enderror">
+            @error('new_password')
             <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
             @enderror
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Foto Berita</label>
-            <input type="file" name="gambar_berita" class="form-control @error('gambar_berita') is-invalid @enderror" accept="image/*" onchange="tampilkanPreview(this, 'tampilFoto')">
-            @error('gambar_berita')
-            <span style="...">{{$message}}</span>
-            @enderror
-            <p></p>
-            <img id="tampilFoto" onerror="this.onerror=null;this.src='https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg'" src="" alt="" width="15%">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Isi Berita</label>
-            <textarea name="isi_berita" id="editor" class="form-control @error('isi_berita') is-invalid @enderror">{{old('isi_berita')}}</textarea>
-            @error('isi_berita')
-            <span style="...">{{$message}}</span>
+            <label class="form-label">Konfirmasi Password Baru</label>
+            <input type="password" name="c_new_password" value="{{old('c_new_password')}}" class="form-control @error('c_new_password') is-invalid @enderror">
+            @error('c_new_password')
+            <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
             @enderror
           </div>
 
-
-          <button type="submit" class="btn btn-primary">Tambah</button>
-          <a href="{{route('berita.index')}}" class="btn btn-secondary">Kembali</a>
+          <button type="submit" class="btn btn-primary">Reset</button>
+          <a href="{{route('dashboard.index')}}" class="btn btn-secondary">Kembali</a>
         </form>
       </div>
     </div>

@@ -1,4 +1,4 @@
-@extends('frontend.layout.main')
+@extends('frontend.layout.pagelayout')
 @section('content')
 
 <!-- Blog preview section-->

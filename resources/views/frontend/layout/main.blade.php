@@ -29,7 +29,7 @@
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 @foreach($menu as $dm)
                                 @if(sizeof($dm['itemMenu']) > 0)
                                     <li class='nav-item dropdown'>
@@ -53,7 +53,7 @@
                                         </a>
                                     </li>
                                 @endif
-                            @endforeach
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                     <li><a href="/profile" class="text-white text-decoration-none d-block py-1 opacity-75 hover-opacity">Profile</a></li>
                     <li><a href="/berita" class="text-white text-decoration-none d-block py-1 opacity-75 hover-opacity">Berita</a></li>
                     <li><a href="/maklumat" class="text-white text-decoration-none d-block py-1 opacity-75 hover-opacity">Maklumat</a></li>
-                    <li><a href="/pelayanan" class="text-white text-decoration-none d-block py-1 opacity-75 hover-opacity">Pelayanan</a></li>
+                    <li><a href="/layanan" class="text-white text-decoration-none d-block py-1 opacity-75 hover-opacity">Pelayanan</a></li>
                     </ul>
                 </div>
 

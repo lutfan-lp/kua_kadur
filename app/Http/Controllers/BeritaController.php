@@ -8,18 +8,20 @@ use App\Models\Kategori;
 
 class BeritaController extends Controller
 {
-    //
-    public function index(){
-        $berita = Berita::with('kategori')->get();
+    public function index()
+    {
+        $berita = Berita::with('kategori')->paginate(10);
         return view('backend.content.berita.list', compact('berita'));
     }
 
-    public function tambah(){
+    public function tambah()
+    {
         $kategori = Kategori::all();
         return view('backend.content.berita.formTambah', compact('kategori'));
     }
 
-    public function prosesTambah(Request $request){
+    public function prosesTambah(Request $request)
+    {
         $request->validate ([
             'judul_berita' => 'required',
             'isi_berita' => 'required',
@@ -45,13 +47,15 @@ class BeritaController extends Controller
         }
     }
 
-    public function ubah($id){
+    public function ubah($id)
+    {
         $kategori = Kategori::all();
         $berita = Berita::findOrFail($id);
         return view('backend.content.berita.formUbah', compact('berita', 'kategori'));
     }
 
-    public function prosesUbah(Request $request){
+    public function prosesUbah(Request $request)
+    {
         $request->validate ([
             'judul_berita' => 'required',
             'isi_berita' => 'required',
@@ -77,7 +81,8 @@ class BeritaController extends Controller
 
     }
 
-    public function hapus($id){
+    public function hapus($id)
+    {
         $berita = Berita::findOrFail($id);
 
         try {

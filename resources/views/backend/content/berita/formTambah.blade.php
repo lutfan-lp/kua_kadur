@@ -14,7 +14,7 @@
             <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
             @enderror
           </div>
-
+          
           <div class="mb-3">
             <label class="form-label">Kategori Berita</label>
             <select name="id_kategori" class = "form-control @error('id_kategori') is-invalid @enderror" id="">

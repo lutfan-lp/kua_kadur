@@ -3,10 +3,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="h3 mb-2 text-gray-800">List Berita</h1>
+        <h1 class="h3 mb-2 text-gray-800">List Layanan</h1>
       </div>
       <div class="col-lg-6 text-right">
-        <a href="{{route('berita.tambah')}}" class="btn btn-sm btn-primary"><i class="fa fa-plus"> Tambah</i></a>
+        <a href="{{route('layanan.tambah')}}" class="btn btn-sm btn-primary"><i class="fa fa-plus"> Tambah</i></a>
       </div>
     </div>
 
@@ -23,9 +23,9 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>Gambar Berita</th>
-                <th>judul Berita</th>
-                <th>kategori</th>
+                <th>Gambar Layanan</th>
+                <th>Nama Layanan</th>
+                <th>Bagian Layanan</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -33,15 +33,15 @@
               @php
                 $no = 1;
               @endphp
-              @foreach($berita as $row)
+              @foreach($layanan as $row)
                 <tr>
                   <td>{{$no++}}</td>
-                  <td><img src="{{ asset('storage/' . $row->gambar_berita) }}" width="50px"></td>
-                  <td>{{$row->judul_berita}}</td>
-                  <td>{{$row->kategori->nama_kategori}}</td>
+                  <td><img src="{{ asset('storage/' . $row->gambar_layanan) }}" width="50px"></td>
+                  <td>{{$row->nama_layanan}}</td>
+                  <td>{{$row->bagian_layanan->nama_bagian_layanan}}</td>
                   <td>
-                    <a href="{{route('berita.ubah', $row->id_berita)}}" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Ubah</a>
-                    <a href="{{route('berita.hapus', $row->id_berita)}}" onclick="return confirm('Anda Yakin?')" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i> Hapus</a>
+                    <a href="{{route('layanan.ubah', $row->id_layanan)}}" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Ubah</a>
+                    <a href="{{route('layanan.hapus', $row->id_layanan)}}" onclick="return confirm('Anda Yakin?')" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i> Hapus</a>
                   </td>
                 </tr>
               @endforeach
@@ -49,7 +49,7 @@
           </table>
         </div>
         <div class="mt-3">
-          {{ $berita->links() }}
+          {{ $layanan->links() }}
         </div>
       </div>
     </div>

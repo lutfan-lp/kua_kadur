@@ -1,18 +1,11 @@
-@extends('frontend.layout.main')
+@extends('frontend.layout.pagelayout')
 @section('content')
 
-<section class="position-relative" style="background-image: url('{{ asset('storage/lorem.jpeg') }}'); background-size: cover; background-position: center; height: 95vh;">
-    <!-- Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-    <!-- Content -->
-    <div class="container h-100 d-flex align-items-center justify-content-center text-white text-center" style="z-index: 2; position: relative;">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-lg-8">
-                <h1 class="display-4 fw-bold">Selamat Datang di Website KUA Kadur</h1>
-                <p class="lead mt-3">Temukan informasi seputar layanan, berita, dan aktivitas KUA Kadur di sini.</p>
-                <a href="{{route('home.profile')}}" class="btn btn-primary btn-lg mt-4" target="blank">Lihat Profil</a>
-            </div>
-        </div>
+<!-- Hero Section -->
+<section class="py-5 text-white position-relative" style="background: linear-gradient(to bottom right, #0a3420, #0e4429, #155c39); overflow: hidden;">
+    <div class="container text-center position-relative z-2">
+        <h1 class="display-4 fw-bold">Berita & Informasi</h1>
+        <p class="lead text-light">Berita dan informasi terkini dari KUA Kecamatan Kadur</p>
     </div>
 </section>
 
@@ -30,13 +23,13 @@
                 @endforeach
                 
                 <div class="text-end mb-5 mb-xl-0">
-                    <a class="text-decoration-none" href="{{route('home.berita')}}">
+                    <a class="text-decoration-none" href="{{route('home.semuaBerita')}}">
                         Semua Berita
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-xl-4">
+            <!-- <div class="col-xl-4">
                 <div class="card border-0 h-100">
                     <div class="card-body p-4">
                         <div class="d-flex h-100 align-items-center justify-content-center">
@@ -56,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -64,11 +57,12 @@
 <section class="py-5">
     <div class="container px-5">
         <h2 class="fw-bolder fs-5 mb-4">Berita Terbaru</h2>
-        <div class="row gx-5">
+        <div class="row g-4">
             @foreach ($berita as $row)
-            <div class="col-lg-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <!-- card -->
                 <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="{{ asset('storage/' . $row->gambar_berita) }}" width="50px" alt="{{$row->judul_berita}}" />
+                    <img class="card-img-top" src="{{ asset('storage/' . $row->gambar_berita) }}" class="card-img-top img-fluid" style="object-fit: cover; height: 200px;" width="50px" alt="{{$row->judul_berita}}" />
                     <div class="card-body p-4">
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{$row->kategori->nama_kategori}}</div>
                         <a class="text-decoration-none link-dark stretched-link" href="{{route('home.detailBerita', $row->id_berita)}}"><div class="h5 card-title mb-3">{{$row->judul_berita}}</div></a>
@@ -79,7 +73,9 @@
                             <div class="d-flex align-items-center">
                                 <div class="small">
                                     <div class="fw-bold">Admin</div>
-                                    <div class="text-muted">{{$row->created_at  }}</div>
+                                    <div class="text-muted">
+                                        {{ $row->created_at ? $row->created_at->format('Y-m-d') : 'Tanggal tidak tersedia' }}
+                                    </div>
                                 </div>
                             </div>
                         </div>

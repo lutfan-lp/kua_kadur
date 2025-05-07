@@ -8,9 +8,14 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::get('/berita', [App\Http\Controllers\HomeController::class, 'berita'])->name('home.berita');
 Route::get('/berita/{id}', [App\Http\Controllers\HomeController::class, 'detailBerita'])->name('home.detailBerita');
+Route::get('/semuaBerita', [App\Http\Controllers\HomeController::class, 'semuaBerita'])->name('home.semuaBerita');
+Route::get('/layanan', [App\Http\Controllers\HomeController::class, 'layanan'])->name('home.layanan');
+Route::get('/layanan/{id}', [App\Http\Controllers\HomeController::class, 'detailLayanan'])->name('home.detailLayanan');
+Route::get('/maklumat', [App\Http\Controllers\HomeController::class, 'maklumat'])->name('home.maklumat');
+Route::get('/maklumat/{id}', [App\Http\Controllers\HomeController::class, 'detailMaklumat'])->name('home.detailMaklumat');
 Route::get('/page/{id}', [App\Http\Controllers\HomeController::class, 'detailPage'])->name('home.detailPage');
-Route::get('/berita', [App\Http\Controllers\HomeController::class, 'semuaBerita'])->name('home.berita');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('home.profile');
 
 Route::get('/login',[App\Http\Controllers\AuthController::class, 'index'])->name('login')->middleware('guest');
@@ -23,6 +28,34 @@ Route::group(['middleware'=>'auth:user'], function() {
 
         Route::get('/reset-password',[App\Http\Controllers\DashboardController::class, 'resetPassword'])->name('dashboard.resetPassword');
         Route::post('/reset-password',[App\Http\Controllers\DashboardController::class, 'prosesResetPassword'])->name('dashboard.prosesResetPassword');
+
+        Route::get('/bagianLayanan', [App\Http\Controllers\BagianLayananController::class, 'index'])->name('bagianLayanan.index');
+        Route::get('/bagianLayanan/tambah', [App\Http\Controllers\BagianLayananController::class, 'tambah'])->name('bagianLayanan.tambah');
+        Route::post('/bagianLayanan/prosesTambah', [App\Http\Controllers\BagianLayananController::class, 'prosesTambah'])->name('bagianLayanan.prosesTambah');
+        Route::get('/bagianLayanan/ubah/{id}', [App\Http\Controllers\BagianLayananController::class, 'ubah'])->name('bagianLayanan.ubah');
+        Route::post('/bagianLayanan/prosesUbah', [App\Http\Controllers\BagianLayananController::class, 'prosesUbah'])->name('bagianLayanan.prosesUbah');
+        Route::get('/bagianLayanan/hapus/{id}', [App\Http\Controllers\BagianLayananController::class, 'hapus'])->name('bagianLayanan.hapus');
+
+        Route::get('/layanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan.index');
+        Route::get('/layanan/tambah', [App\Http\Controllers\LayananController::class, 'tambah'])->name('layanan.tambah');
+        Route::post('/layanan/prosesTambah', [App\Http\Controllers\LayananController::class, 'prosesTambah'])->name('layanan.prosesTambah');
+        Route::get('/layanan/ubah/{id}', [App\Http\Controllers\LayananController::class, 'ubah'])->name('layanan.ubah');
+        Route::post('/layanan/prosesUbah', [App\Http\Controllers\LayananController::class, 'prosesUbah'])->name('layanan.prosesUbah');
+        Route::get('/layanan/hapus/{id}', [App\Http\Controllers\LayananController::class, 'hapus'])->name('layanan.hapus');
+
+        Route::get('/kategoriMaklumat', [App\Http\Controllers\KategoiMaklumatController::class, 'index'])->name('kategoriMaklumat.index');
+        Route::get('/kategoriMaklumat/tambah', [App\Http\Controllers\KategoiMaklumatController::class, 'tambah'])->name('kategoriMaklumat.tambah');
+        Route::post('/kategoriMaklumat/prosesTambah', [App\Http\Controllers\KategoiMaklumatController::class, 'prosesTambah'])->name('kategoriMaklumat.prosesTambah');
+        Route::get('/kategoriMaklumat/ubah/{id}', [App\Http\Controllers\KategoiMaklumatController::class, 'ubah'])->name('kategoriMaklumat.ubah');
+        Route::post('/kategoriMaklumat/prosesUbah', [App\Http\Controllers\KategoiMaklumatController::class, 'prosesUbah'])->name('kategoriMaklumat.prosesUbah');
+        Route::get('/kategoriMaklumat/hapus/{id}', [App\Http\Controllers\KategoiMaklumatController::class, 'hapus'])->name('kategoriMaklumat.hapus');
+
+        Route::get('/maklumat', [App\Http\Controllers\MaklumatController::class, 'index'])->name('maklumat.index');
+        Route::get('/maklumat/tambah', [App\Http\Controllers\MaklumatController::class, 'tambah'])->name('maklumat.tambah');
+        Route::post('/maklumat/prosesTambah', [App\Http\Controllers\MaklumatController::class, 'prosesTambah'])->name('maklumat.prosesTambah');
+        Route::get('/maklumat/ubah/{id}', [App\Http\Controllers\MaklumatController::class, 'ubah'])->name('maklumat.ubah');
+        Route::post('/maklumat/prosesUbah', [App\Http\Controllers\MaklumatController::class, 'prosesUbah'])->name('maklumat.prosesUbah');
+        Route::get('/maklumat/hapus/{id}', [App\Http\Controllers\MaklumatController::class, 'hapus'])->name('maklumat.hapus');
 
         Route::get('/kategori', [App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
         Route::get('/kategori/tambah', [App\Http\Controllers\KategoriController::class, 'tambah'])->name('kategori.tambah');
